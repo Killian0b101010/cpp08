@@ -6,12 +6,11 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 20:22:10 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/12/25 04:18:18 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/12/25 18:51:29 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
-#include <iostream>
 #include <vector>
 
 Span::Span() {}

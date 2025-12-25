@@ -1,5 +1,6 @@
 NAME = main
-SRC = main.cpp
+SRC = MutanStack.cpp \
+			main.cpp
 OBJ = $(SRC:.cpp=.o)
 DEP = $(SRC:.cpp=.d)
 
