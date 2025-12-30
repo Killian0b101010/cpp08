@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 15:05:28 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/12/24 20:16:03 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/12/29 18:01:47 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <exception>
 #include <iostream>
 #include <vector>
-int main(void) {
+int main(void) 
+{
   std::vector<int> v;
   v.push_back(15);
   v.push_back(20);

@@ -6,13 +6,16 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 20:22:15 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/12/25 04:15:53 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/12/27 19:27:24 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef SPAN_HPP
 #define SPAN_HPP
 #include <exception>
 #include <vector>
+#include <cstddef>
+#include <algorithm>
 class Span {
 
 private:

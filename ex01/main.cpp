@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 20:22:01 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/12/25 04:19:19 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/12/27 20:13:07 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@
 //   return 0;
 // }
 
-#include "Span.hpp"
-#include <cstdlib>
-#include <iostream>
+
 
 int main() {
   std::cout << "===== TEST 1 : Cas simple =====" << std::endl;
