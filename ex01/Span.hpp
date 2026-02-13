@@ -15,7 +15,7 @@
 #include <exception>
 #include <vector>
 #include <cstddef>
-#include <algorithm>
+#include <iterator>
 class Span {
 
 private:
@@ -29,8 +29,20 @@ public:
   Span &operator=(const Span &cpy);
   ~Span();
   void addNumber(int n);
+  int getVec(int );
+  
+  template <typename iterator>
+  void addNumber(iterator begin, iterator end)
+  {
+      if(std::distance(begin,end) + _vect.size() > _i)
+        throw MaxSize();
+      _vect.insert(_vect.end(), begin, end);
+  }
+
   int longestSpan();
   int shortestSpan();
+  int getSize();
+
   class IsInvalid : public std::exception {
     const char *what() const throw() { return ("Invalid list"); }
   };
@@ -38,4 +50,5 @@ public:
     const char *what() const throw() { return ("MaxSize"); }
   };
 };
+std::ostream &operator << (std::ostream &s, Span &span);
 #endif

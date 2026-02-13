@@ -12,7 +12,9 @@
 
 #include "Span.hpp"
 #include <vector>
-
+#include <algorithm>
+#include <iostream>
+#include <iterator>
 Span::Span() {}
 
 Span::Span(unsigned int i) : _i(i) {}
@@ -54,6 +56,7 @@ int Span::longestSpan() {
     if (tmp[i] < min)
       min = tmp[i];
   }
+  // std::cout << "Le max est = " << max << "et le min est = " << min <<std::endl;
   return (max - min);
 }
 
@@ -70,4 +73,15 @@ int Span::shortestSpan() {
       shortest = diff;
   }
   return (shortest);
+}
+int Span::getSize()
+{
+  return(_vect.size());
+}
+int Span::getVec(int i){return(_vect[i]);}
+std::ostream &operator << (std::ostream &s, Span &span)
+{
+    for(int i = 0;i < span.getSize();i++)
+      s << "[" << span.getVec(i) << "]" << std::endl;
+  return(s);
 }
