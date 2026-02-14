@@ -6,15 +6,15 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 20:22:10 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/12/25 18:51:29 by kiteixei         ###   ########.fr       */
+/*   Updated: 2026/02/14 17:45:08 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
-#include <vector>
 #include <algorithm>
 #include <iostream>
 #include <iterator>
+#include <vector>
 Span::Span() {}
 
 Span::Span(unsigned int i) : _i(i) {}
@@ -48,7 +48,7 @@ int Span::longestSpan() {
   int min = tmp[0];
 
   if (tmp.size() < 2)
-    throw IsInvalid();
+    throw NotEnoughtNumbers();
 
   for (size_t i = 1; i < tmp.size(); ++i) {
     if (tmp[i] > max)
@@ -56,14 +56,15 @@ int Span::longestSpan() {
     if (tmp[i] < min)
       min = tmp[i];
   }
-  // std::cout << "Le max est = " << max << "et le min est = " << min <<std::endl;
+  // std::cout << "Le max est = " << max << "et le min est = " << min
+  // <<std::endl;
   return (max - min);
 }
 
 int Span::shortestSpan() {
 
   if (_vect.size() < 2)
-    throw IsInvalid();
+    throw NotEnoughtNumbers();
   std::vector<int> tmp = _vect;
   std::sort(tmp.begin(), tmp.end());
   int shortest = tmp[1] - tmp[0];
@@ -74,14 +75,12 @@ int Span::shortestSpan() {
   }
   return (shortest);
 }
-int Span::getSize()
-{
-  return(_vect.size());
-}
-int Span::getVec(int i){return(_vect[i]);}
-std::ostream &operator << (std::ostream &s, Span &span)
-{
-    for(int i = 0;i < span.getSize();i++)
-      s << "[" << span.getVec(i) << "]" << std::endl;
-  return(s);
+
+int Span::getSize() { return (_vect.size()); }
+
+int Span::getVec(int i) { return (_vect[i]); }
+std::ostream &operator<<(std::ostream &s, Span &span) {
+  for (int i = 0; i < span.getSize(); i++)
+    s << "[" << span.getVec(i) << "]" << std::endl;
+  return (s);
 }
