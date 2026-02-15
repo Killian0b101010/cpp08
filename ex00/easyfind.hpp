@@ -14,7 +14,9 @@
 #define EASYFIND_HPP
 #include <algorithm>
 #include <exception>
-
+#include <iostream>
+#include <vector>
+#include <list>
 class Notfound : public std::exception {
 public:
   const char *what() const throw() { return ("Not found"); }

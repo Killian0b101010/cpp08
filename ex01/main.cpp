@@ -45,9 +45,9 @@ void ft_main_add_number() {
   std::cout << sp << std::endl;
 }
 
-void ft_list_vector() {
-  Span sp(1);
-
+void ft_list_vector() 
+{
+  Span sp(100);
   std::list<int> myList;
   myList.push_back(10);
   myList.push_back(20);
@@ -59,14 +59,30 @@ void ft_list_vector() {
   sp.addNumber(myVector.begin(), myVector.end());
   std::cout << sp.shortestSpan() << std::endl;
   std::cout << sp.longestSpan() << std::endl;
-  std::cout << sp << std::endl;
 }
 
+void ft_deque_vector() 
+{
+  Span sp(100);
+  std::deque<int> myDeQue;
+  myDeQue.push_back(10);
+  myDeQue.push_back(20);
+  myDeQue.push_back(30);
+  std::vector<int> myVector;
+  myVector.push_back(1);
+  myVector.push_back(2);
+  sp.addNumber(myDeQue.begin(), myDeQue.end());
+  sp.addNumber(myVector.begin(), myVector.end());
+  std::cout << sp.shortestSpan() << std::endl;
+  std::cout << sp.longestSpan() << std::endl;
+  std::cout << sp;
+}
 int main() {
   try {
     ft_main_42();
     ft_main_add_number();
     ft_list_vector();
+    ft_deque_vector();
 
   } catch (std::exception &s) {
     std::cerr << s.what() << std::endl;

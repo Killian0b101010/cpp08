@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 20:22:10 by kiteixei          #+#    #+#             */
-/*   Updated: 2026/02/14 17:45:08 by kiteixei         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:21:17 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
+
 Span::Span() {}
 
 Span::Span(unsigned int i) : _i(i) {}
